@@ -15,7 +15,7 @@ This document shows how to change the IP in the EIB.
 To change the IP, there must be done two steps.
 
 * Change the IP in the EIB itself
-* Change the IP in the configuration file, otherwise the IP will return automatically to old IP when it is configured by the TMA PXI.
+* Change the IP in the configuration file, otherwise the PXIs will not connect, send and/or receive data from the EIB.
 
 ### Change the IP in the EIB
 
@@ -24,8 +24,8 @@ To change the IP in the EIB:
 * Open the EIB tool "EIBApplication.exe" in a computer with access to the EIB network. This tools works on windows machines
 * Connect to the EIB using the EIB IP **139.229.161.50**
   ![Connect to EIB](media/dwpB0qoBa9.png)
-* Update the configuration from the EIB
-  ![1702899724687](image/README/1702899724687.png)
+* Update the configuration from the EIB.
+  ![1702899724687](media/1702899724687.png)
 * Change the network parameters in the configuration window
   ![Network parameters in the EIB](media/BjMECcF8ch.png)
 * To change the configuration, just click in the Value of the Parameter that needs to be updated
@@ -41,8 +41,9 @@ Go to the TMA PXI using ssh. Edit the file multi_ext.txt located in "/c/Configur
 according the requirements for the communication and with the same data as in point [Change the IP in the EIB](#change-the-ip-in-the-eib).
 
 ```bash
-EIB8;network_user:ip_address;192.168.211.1;
-EIB8;network_user:gateway;192.168.211.253;
+EIB8;network_user:ip_address;139.229.161.50;
+EIB8;network_user:netmask;255.255.255.240;
+EIB8;network_user:gateway;139.229.161.62;
 EIB8;network_user:tcp_port;1050;
 EIB8;network_user:dhcp_enabled;0;
 ```
@@ -56,6 +57,6 @@ Find next field and insert the values for the host that it is going to ge the UP
 ```bash
 # Setup UDP destination
 EIB8;udp_transfer:udp_dest_mac;00.02.25.03.77.2a;        ;Set MAC address, where UDP packets of the EIB8 are sent to 
-EIB8;udp_transfer:udp_dest_ip;192.168.211.11;            ;Set IP address, where UDP packets of the EIB8 are sent to 
+EIB8;udp_transfer:udp_dest_ip;139.229.161.51;            ;Set IP address, where UDP packets of the EIB8 are sent to 
 EIB8;udp_transfer:udp_dest_port;3051;                    ;Set Port, where UDP packets of the EIB8 are sent to
 ```
