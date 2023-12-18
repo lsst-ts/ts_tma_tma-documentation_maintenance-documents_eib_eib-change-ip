@@ -1,10 +1,10 @@
 # EIB_ChangeIP
 
-| **Requested by:** | **AURA** |
-| --- | --- |
-| **Doc. Code** | -- |
-| **Editor:** | Alberto Izpizua |
-| **Approved by:** | Julen García |
+| **Requested by:** | **AURA**  |
+| ----------------------- | --------------- |
+| **Doc. Code**     | --              |
+| **Editor:**       | Alberto Izpizua |
+| **Approved by:**  | Julen García   |
 
 ## Introduction
 
@@ -22,16 +22,18 @@ To change the IP, there must be done two steps.
 To change the IP in the EIB:
 
 * Open the EIB tool "EIBApplication.exe" in a computer with access to the EIB network. This tools works on windows machines
-* Connect to the EIB using the old IP
-![Connect to EIB](media/dwpB0qoBa9.png)
+* Connect to the EIB using the EIB IP **139.229.161.50**
+  ![Connect to EIB](media/dwpB0qoBa9.png)
+* Update the configuration from the EIB
+  ![1702899724687](image/README/1702899724687.png)
 * Change the network parameters in the configuration window
-![Network parameters in the EIB](media/dwpB0qoBa9.png)
+  ![Network parameters in the EIB](media/BjMECcF8ch.png)
 * To change the configuration, just click in the Value of the Parameter that needs to be updated
-![updating an EIB parameter](media/MFWipZ9Wpf.png)
+  ![updating an EIB parameter](media/MFWipZ9Wpf.png)
 * Write the configuration to the EIB
-![Write EIB configuration](media/giYtwDGHHB.png)
+  ![Write EIB configuration](media/giYtwDGHHB.png)
 * Reset the EIB so that the new configuration takes effect.
-![Reset the EIB](media/ThzVhB3VKx.png)
+  ![Reset the EIB](media/ThzVhB3VKx.png)
 
 ### Change the IP in the configuration file
 
