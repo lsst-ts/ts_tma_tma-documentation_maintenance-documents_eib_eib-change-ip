@@ -1,4 +1,4 @@
-# EIB_ChangeIP
+# Change IP
 
 | **Requested by:** | **AURA**  |
 | ----------------------- | --------------- |
